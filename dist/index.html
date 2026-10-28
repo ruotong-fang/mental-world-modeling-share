@@ -6,21 +6,17 @@
   <meta name="theme-color" content="#071017" />
   <title>Mental World Modeling · 从状态识别到动态推理</title>
   <meta name="description" content="Mental World Modeling 论文组内分享交互演示" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css" /><link rel="stylesheet" href="reading.css" />
 </head>
 <body>
   <main id="deck" aria-live="polite"></main>
   <div class="chrome">
     <button id="menuBtn" class="icon-btn" aria-label="打开目录">目录</button>
-    <div class="mode-switch" role="group" aria-label="内容模式">
-      <button data-mode="paper" class="active">论文</button>
-      <button data-mode="interpretation">我们的解读</button>
-    </div>
+    <div class="reading-brand">Mental World Modeling · 从故事到方法与应用</div>
     <button id="fullscreenBtn" class="icon-btn" aria-label="全屏">F 全屏</button>
   </div>
   <nav id="progress" aria-label="页面导航"></nav>
-  <div id="counter" aria-hidden="true"></div>
-  <button id="evidenceBtn" class="evidence-btn">查看论文原文 <span>↗</span></button>
+  <div class="reading-controls"><button id="prevBtn">← 上一页</button><div id="counter" aria-live="polite"></div><button id="nextBtn">下一页 →</button><button id="evidenceBtn" class="evidence-btn">本页出处与论文 ↗</button></div>
 
   <aside id="evidenceDrawer" class="drawer" aria-hidden="true" aria-label="论文证据">
     <div class="drawer-head"><div><span class="eyebrow">PAPER EVIDENCE</span><h2>论文证据</h2></div><button id="closeDrawer" aria-label="关闭">×</button></div>
@@ -29,10 +25,10 @@
   <div id="scrim" class="scrim"></div>
 
   <section id="overview" class="overview" aria-hidden="true">
-    <div class="overview-head"><div><span class="eyebrow">OVERVIEW</span><h2>15 页演示目录</h2></div><button id="closeOverview">关闭</button></div>
+    <div class="overview-head"><div><span class="eyebrow">OVERVIEW</span><h2>演示目录</h2></div><button id="closeOverview">关闭</button></div>
     <div id="overviewGrid" class="overview-grid"></div>
   </section>
-  <div id="help" class="help">← → / Space 切页 · O 目录 · F 全屏 · Esc 关闭</div>
-  <script type="module" src="app.js"></script>
+  <div id="help" class="help">滚动阅读本页 · ← → 切页 · O 目录</div>
+  <script type="module" src="story.js"></script>
 </body>
 </html>
